@@ -5,7 +5,7 @@ Required:
 * DotNet 6
 * Code Editor such as VSCode
 * Java 11
-* SBT
+* SBT/Maven
 
 Install the required items above. Setup an Azure AD registration for a Web API.
 

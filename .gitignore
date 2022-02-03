@@ -1,2 +1,10 @@
 /api/bin
 /api/obj
+/loadtesting/.metals
+/loadtesting/.vscode
+/loadtesting/null
+/loadtesting/.bsp
+/loadtesting/project/project
+/loadtesting/project/target
+/loadtesting/target
+.vscode

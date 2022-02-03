@@ -20,14 +20,12 @@ class GetItem extends Simulation {
   val constantLoadDuration = java.lang.Long.getLong("constantLoadDuration", 30L)
   val baseURL = System.getProperty(
     "baseURL",
-    "https://localhost:44332"
+    "https://localhost:7132"
   )
-  val tenantId =
-    "8fd9522b-2abe-4772-9a92-f3c4ad585895" //System.getProperty("tenantId")
-  val clientId =
-    "c1ef8bd6-ed89-4d18-8a73-3200d4663715" //System.getProperty("clientId")
-  val clientSecret =
-    "y_u7Q~sdCLt07zYcPsRMehKRQKoR_xdeQ5AVA" //System.getProperty("clientSecret")
+  val tenantId = System.getProperty("tenantId")
+  val clientId = System.getProperty("clientId")
+  val clientSecret = System.getProperty("clientSecret")
+  val scope = System.getProperty("scope")
 
   var accessToken: String = ""
 
@@ -43,7 +41,7 @@ class GetItem extends Simulation {
           "client_id" -> clientId,
           "client_secret" -> clientSecret,
           "grant_type" -> "client_credentials",
-          "scope" -> "api://c1ef8bd6-ed89-4d18-8a73-3200d4663715/.default"
+          "scope" -> scope
         )
       )
       .asString
@@ -79,7 +77,6 @@ class GetItem extends Simulation {
         )
         .check(
           status.is(200)
-          // header(HttpHeaderNames.ContentLength) is "331060"
         )
     )
 
