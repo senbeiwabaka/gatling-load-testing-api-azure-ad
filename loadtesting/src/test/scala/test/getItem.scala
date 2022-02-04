@@ -59,17 +59,14 @@ class GetItem extends Simulation {
     .baseUrl(baseURL)
     // .authorizationHeader(s"Bearer $accessToken")
 
-  var scn = scenario("GetItem")
+  var scn = scenario("Random")
     .exec { session =>
-      // println("access token: " + accessToken)
-
-      // session.
       session.set("access_token", accessToken)
     }
     .exec(
-      http("GetItem")
+      http("GETRandom")
         .get(
-          "/api/v1/Test/GetItem/1"
+          "/api/random"
         )
         .header(
           "Authorization",
