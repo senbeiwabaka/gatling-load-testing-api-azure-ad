@@ -23,7 +23,7 @@ It contains basic simulation from gatling quick start bundle.
 
 All tests:
 ```
-sbt "gatling:test"
+sbt "Gatling/test"
 ```
 
 Single test:
@@ -33,10 +33,10 @@ sbt "gatling:testOnly items.GetRandom"
 
 Different parameters:
 ```
-sbt -DdefaultThinkTime=3 -DuserCount=10 -DrampupSeconds=10 -DconstantLoadDuration=50 -DbaseURL=http://some.url gatling:test
+sbt -DdefaultThinkTime=3 -DuserCount=10 -DrampupSeconds=10 -DconstantLoadDuration=50 -DbaseURL=http://some.url Gatling/test
 ```
 ```
-sbt -DtenantId='123' -DclientId='123' -DclientSecret='123' -Dscope='scope' gatling:test
+sbt -DtenantId='123' -DclientId='456' -DclientSecret='secret' -Dscope='api://456/.default' Gatling/test
 ```
 
 Report:
