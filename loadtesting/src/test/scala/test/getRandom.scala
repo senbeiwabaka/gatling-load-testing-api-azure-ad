@@ -12,7 +12,7 @@ import scalaj.http.{Http, HttpOptions}
 import org.json4s._
 import org.json4s.native.JsonMethods._
 
-class GetItem extends Simulation {
+class GetRandom extends Simulation {
   // Default setup
   val defaultThinkTime = Integer.getInteger("defaultThinkTime", 5)
   val userCount = Integer.getInteger("userCount", 1)
@@ -53,6 +53,8 @@ class GetItem extends Simulation {
 
     // copy the token out as a string
     accessToken = other.extract[String]
+
+    println("access token " + accessToken)
   }
 
   var httpProtocol = http

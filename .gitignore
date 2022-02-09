@@ -8,3 +8,4 @@
 /loadtesting/project/target
 /loadtesting/target
 .vscode
+.metals

@@ -7,17 +7,17 @@ It contains basic simulation from gatling quick start bundle.
 [gatlingdoc]: https://gatling.io/docs/current/advanced_tutorial/
 
 ### Params
-|Param Name                 |Default       |Description                                                                     |
+|Param Name                 |Default                    |Description                                                        |
 |---------------------------|--------------------------:|-------------------------------------------------------------------|
 |defaultThinkTime           |5                          |think time in seconds - which is the delay between user actions    |
 |userCount                  |1                          |requested number of users once totally ramped up                   |
 |rampupDuration             |0                          |number of seconds for ramp up of users                             |
 |constantLoadDuration       |30                         |number of seconds for steady state run once users are ramped up    |
 |baseURL                    |https://localhost:7132     |base URL for endpoint being tested                                 |
-|tenantId                   |                           |Azure AD tenant id                                                 |
-|clientId                   |                           |Azure app registration client id                                   |
-|clientSecret               |                           |Azure app registration client secret                               |
-|scope                      |                           |Azure app registration scope                                       |
+|tenantId (Required)        |                           |Azure AD tenant id                                                 |
+|clientId (Required)        |                           |Azure app registration client id                                   |
+|clientSecret (Required)    |                           |Azure app registration client secret                               |
+|scope (Required)           |                           |Azure app registration scope                                       |
 
 ### Run
 
@@ -28,7 +28,7 @@ sbt "gatling:test"
 
 Single test:
 ```
-sbt "gatling:testOnly items.GetItem"
+sbt "gatling:testOnly items.GetRandom"
 ```
 
 Different parameters:
