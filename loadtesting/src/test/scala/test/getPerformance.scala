@@ -53,8 +53,6 @@ class GetPerformance extends Simulation {
 
     // copy the token out as a string
     accessToken = other.extract[String]
-
-    println("access token " + accessToken)
   }
 
   var httpProtocol = http
